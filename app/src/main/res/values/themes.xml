@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ZakatApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="android:colorButtonNormal">#03A9F4</item>
+
+        <item name="colorPrimary">@color/blue</item>
+        <item name="android:textColorPrimary">@color/black</item>
+    </style>
+
+    <style name="Theme.ZakatApp" parent="Base.Theme.ZakatApp" />
+</resources>

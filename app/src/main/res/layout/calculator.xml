@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#03A9F4"
+        android:elevation="4dp"
+        app:titleTextColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Weight -->
+        <TextView
+            android:id="@+id/gold_weight_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gold Weight (grams):"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/editTextWeight"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Enter gold weight in grams"
+            android:inputType="numberDecimal" />
+
+        <!-- Gold Type -->
+        <RadioGroup
+            android:id="@+id/radioGroupType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButtonKeep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keep" />
+
+            <RadioButton
+                android:id="@+id/radioButtonWear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wear" />
+        </RadioGroup>
+
+        <!-- Gold Value -->
+        <TextView
+            android:id="@+id/gold_value_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Gold Value per Gram:"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/editTextValue"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Gold Value per gram"
+            android:inputType="numberDecimal" />
+
+        <!-- Calculate Button -->
+        <Button
+            android:id="@+id/buttonCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Calculate Zakat" />
+
+        <!-- Result -->
+
+        <TextView
+            android:id="@+id/textViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Reset" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
